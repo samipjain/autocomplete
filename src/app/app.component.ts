@@ -23,7 +23,7 @@ export class AppComponent {
   fetch(queryParam: string) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(this.dataset.filter(d => d === queryParam ))
+        resolve(this.dataset.filter(d => d.includes(queryParam)))
       }, 1000);
     })
   }
