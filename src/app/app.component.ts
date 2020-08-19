@@ -1,18 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'autocomplete';
 
   queryString: string;
 
   dataset = ['samip', 'helena', 'abhishek', 'prafull', 'samipi'];
 
-  searchResults: Array<String> = this.dataset;
+  searchResults: any = [];
+
+  ngOnInit() {
+    this.searchResults = this.dataset
+  }
 
   onSubmit() {
     this.fetch(this.queryString).then((res) => { 
