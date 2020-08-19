@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "autocomplete"
+    }
+  },
+  "defaultProject": "autocomplete",
+  "cli": {
+    "analytics": false
+  }
 }
